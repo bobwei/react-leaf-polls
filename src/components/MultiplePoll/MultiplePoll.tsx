@@ -20,7 +20,7 @@ const MultiplePoll = ({
   theme,
   onVote,
   isVoted,
-  isVotedId,
+  isVotedId
 }: MultiplePollProps) => {
   const [voted, setVoted] = useState<boolean>(false)
   const answerRefs = useRef<RefObject<HTMLDivElement>[]>(
@@ -69,7 +69,7 @@ const MultiplePoll = ({
           </div>
           {voted && (
             <span style={{ color: theme?.textColor }}>
-              {result.percentage}%
+              {result.percentage}% ( {result.votes} )
             </span>
           )}
         </div>
